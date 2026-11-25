@@ -16,13 +16,13 @@ model.summary()
 # helper function
 #1 function  to decode the review
 def decode_review(encoded_review):
-    return ' '.join(reverse_word_index.get(i-3,'?') for i in review)
+    return ' '.join(reverse_word_index.get(i-3,'?') for i in encoded_review)
 
 #2 function to preprocess user input
 def preprocess_test(text):
     words=text.lower().split()
     encoded_review=[word_index.get(word,2)+3 for word in words]
-    padded_review=sequence.pad_sequences([encoded_review],maxlen=800)
+    padded_review=sequence.pad_sequences([encoded_review],maxlen=500)
     return padded_review
 
 #3 prediction function
