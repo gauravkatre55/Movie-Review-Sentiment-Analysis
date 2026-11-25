@@ -189,7 +189,7 @@ st.markdown(
 # Model settings - MUST match the training configuration
 # ---------------------------------------------------------
 MAX_FEATURES = 10000
-MAX_LEN = 200
+MAX_LEN = 500
 MODEL_PATH = "rnn_model.keras"
 
 
